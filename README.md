@@ -1,2 +1,2 @@
-# JavaScript---Starter
+# JavaScript-Starter
 Starting in JavaScript
