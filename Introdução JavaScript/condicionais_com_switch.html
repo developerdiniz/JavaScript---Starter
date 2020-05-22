@@ -1,0 +1,21 @@
+_<!DOCTYPE html>
+<head>
+    <title>Condicionais com Switch</title>
+</head>
+<body>
+    <script>
+        function retornaSexo(sexo){
+            switch (sexo){
+                case "M":
+                    return "Masculino";
+                case "F":
+                    return "Feminino";
+                default:
+                    return "Outros";
+            }
+        }
+        var resultado = retornaSexo("R");
+        console.log(resultado);
+    </script>
+</body>
+</html>
