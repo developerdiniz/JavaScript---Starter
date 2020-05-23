@@ -4,7 +4,20 @@
     </head>
     <body>
         <script>
+            var nota = 6, falta = 74;
             
+            if (nota >= 7 && falta >= 75){
+                console.log("aprovado");
+            }else if (nota >= 75 || falta >=75){
+                console.log("Recuperação");
+            }else{
+                console.log("Reprovado");
+            }
+
+            var sexo = "m";
+            //Sem if, pois o = ja faz a comparação e nos retorna true or false.
+            var masculino = (sexo ==="M"); 
+            console.log(masculino)            
         </script>
     </body>
 </html>
