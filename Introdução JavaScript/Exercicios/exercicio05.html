@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 05</title>
+</head>
+<body>
+    <h3>Dado o seguinte vetor de objetos:</br>
+        var usuarios = [</br>
+         {</br>
+         nome: "Diego",</br>
+         habilidades: ["Javascript", "ReactJS", "Redux"]</br>
+         },</br>
+         {</br>
+         nome: "Gabriel",</br>
+         habilidades: ["VueJS", "Ruby on Rails", "Elixir"]</br>
+         }</br>
+        ];</br>
+        Escreva uma função que produza o seguinte resultado:</br>
+        O Diego possui as habilidades: Javascript, ReactJS, Redux</br>
+        O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir</br>
+        Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array</br>
+        com um separador utilize o join.</h3>
+    <script>
+        var usuarios = [{nome: "Diego",habilidades: ["Javascript", "ReactJS", "Redux"]},
+            {nome: "Rafael",habilidades: ["Python", "JavaScript", "SQL Server"]}];
+
+    function imprimi(usuario){
+        for (usuario of usuarios) {
+        console.log("O "+ usuario.nome+" possui as habilidades "+usuario.habilidades.join(','));
+        }
+    }
+    imprimi(usuarios);
+    </script>
+</body>
+</html>
