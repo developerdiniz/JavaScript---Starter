@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhando com a DOM</title>
+</head>
+<body>
+    <div id="app">
+    <!--Entrada de dados: vamos criar uma caixa de texto com um botão para entrada de dados.-->
+    <!--O id definido, sempre vai ser unico, a class pode não ser unica-->
+    <input type="text" name="nome" id="nome" class="nome"/>
+    <!--Criar um input para testar o querySelector-->
+    <input type="text" name="nome_query">
+        <button class="botao">Adicionar</button>
+    </div>
+    <script>
+        /*Vamos criar uma variavel e referenciar ela a entrada dos dados na div app*/
+        /*getElementById: vai referenciar nossa variavel ao id que passamos como paramento, nesse caso o "nome"*/
+        var inputElement = document.getElementById('nome');
+        /*getElementsByTagName: vai referenciar a tag que estamos usamos, nesse caso todos os elementos da tag input*/
+        /*Não temos como garantir que vai ser um elemento unico pois se tiver mais de um input, vai nos trazer um vetor com todos input, entao podemos escolher por indice. ex: ('input')[0]*/
+        var inputElement = document.getElementsByTagName('input');
+        /*getElementsByClassName: vai referenciar ao nome da class.*/
+        var inputElement = document.getElementsByClassName('nome')[0];
+        /*Nosso ultimo exemplo, tem uma função como se fosse a junção dos demais exemplo*/
+        /*querySelector: buscar os elementos na nossa DOM*/
+        /*O querySelector nos permiti percorrer nossa Dom, até encontrar nosso elemento*/
+        /*querySelector(parametro = caminho), passamos o caminho nosso elemento esta dentro da div="app e é o input */
+        var inputElement = document.querySelector('div#app input');
+        /*podemos ir direto no nosso input*/
+        var inputElement = document.querySelector('input[name=nome_query]');
+        /*obs: o querySelector vai nos retornar um unico elemento, podemos usar o querySelectorAll para trazer por exemplo todos os input*/
+        console.log(inputElement);
+        /*OBS: todos esses exmeplos acima, fazem a busca de maneiras diferentes, como definimos todas com o mesmo nome de var,
+        e temos apenas um console.log, vamos ter apenas um resultado.*/
+    </script>
+</body>
+</html>

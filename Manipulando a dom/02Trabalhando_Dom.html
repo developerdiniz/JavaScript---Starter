@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhando com a DOM part.2</title>
+</head>
+<body>
+    <div id="app">
+    <!--Entrada de dados: vamos criar uma caixa de texto com um botão para entrada de dados.-->
+        <input type="text" name="nome"/>
+        <button class="botao">Adicionar</button>
+    </div>
+    <script>
+        /*A função mostrarAlerta() criada na div do 00evento.inline, vamos transferir ela e criar dentro do script. */
+        /*Essa variavel vai receber o valor do button com class botao.*/
+        var btnElement = document.querySelector('button.botao');
+        
+        /*Vamos criar um var para referenciar o texto digitado na tela e mostrar ele no alert*/
+        var inputElement = document.querySelector('input[name=nome]'); 
+
+        /*E vamos atribuir o metodo onclick + a função para mostrar o alerta*/
+        btnElement.onclick = function() {
+            /*Vamos capturar o texto usando o .value*/
+            var text = inputElement.value;
+            alert(text)
+        }
+    </script>
+</body>
+</html>
