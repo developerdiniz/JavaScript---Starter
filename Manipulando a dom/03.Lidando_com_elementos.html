@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lidando com Elementos</title>
+</head>
+<body>
+    <div id="app">
+        
+    </div>
+
+    <script>
+        /*Alem de poder referenciar elementos, tambem podemos criar elementos na nossa DOM */
+        /*Tag <a> para tratar com link*/
+        var linkElement = document.createElement("a");
+        linkElement.setAttribute('href', 'https://developerdiniz.github.io/Imersaocss/');
+        
+        /*criar um elemento para exbiir o texto*/
+        var textElement = document.createTextNode('Acessar minha pagina pessoal.');
+        /*Agora vamos posicionar o texto dentro do elemento com o link */
+        linkElement.appendChild(textElement);
+
+        /*Vamos referenciar o texto+link dentro do corpo html*/
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement);
+        /*Ao rodar esse codigo no navegador vamos ter um texto em forma de link que nos levará a minha pagina.*/
+    </script>    
+</body>
+</html>
